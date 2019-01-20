@@ -145,7 +145,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let options: [SCNPhysicsShape.Option: Any] = [   //p. 493
             SCNPhysicsShape.Option.collisionMargin: 0.01
         ];
-        ball.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: ball, options: options));
+        let shape: SCNPhysicsShape = SCNPhysicsShape(node: ball, options: options);
+        ball.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape);
         let power: Float = 10.0;
 
         let force: SCNVector3 = SCNVector3(
