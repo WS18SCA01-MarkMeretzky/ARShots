@@ -29,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a new scene containing an omni light.
         guard let scene: SCNScene = SCNScene(named: "art.scnassets/empty.scn") else {
-            fatalError("couldn't find art.scnassets/hoop.scn");
+            fatalError("couldn't find art.scnassets/empty.scn");
         }
         
         // Set the scene to the view.
